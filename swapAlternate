@@ -17,7 +17,12 @@ void printArray(int arr[], int size)
 void swapAlternate(int arr[], int size){
 	int start=0;
 	int end=1;
-	while(start<size){
+	int len;
+	if(size%2==0)
+		len=size;
+	else
+		len=size-1;
+	while(start<len){
 
 		swap(arr[start], arr[end]);
 		start+=2;
