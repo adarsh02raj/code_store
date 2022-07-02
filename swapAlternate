@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+//function code-------
+void inputArray(int arr[], int size)
+{
+	for(int i=0; i<size; i++){
+		cin>>arr[i];
+	}
+}
+void printArray(int arr[], int size)
+{
+	for(int i=0; i<size; i++)
+	{
+		cout<<arr[i]<<" ";
+	}
+}
+void swapAlternate(int arr[], int size){
+	int start=0;
+	int end=1;
+	while(start<size){
+
+		swap(arr[start], arr[end]);
+		start+=2;
+		end+=2;
+	}
+}
+
+
+
+//function end-up
+int main()
+{
+	int size;
+	cin>>size;
+	int arr[size];
+	inputArray(arr, size);
+	swapAlternate(arr, size);
+	printArray(arr, size);
+
+	return 0;
+}
